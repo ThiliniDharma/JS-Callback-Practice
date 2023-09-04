@@ -8,7 +8,7 @@ function move(element)
         element.style.bottom = bottom + 'px'
     }
 
-    function moveWithArrowKeys(left, bottom)
+    function moveWithArrowKeys(left, bottom,callback)
     {
         let direction = null;
         let x = left;
@@ -61,11 +61,13 @@ function move(element)
             {
                 direction = 'south'
             }
+            callback(direction)
         })
         
         document.addEventListener('keyup', function(e)
         {
             direction = null
+            callback(direction)
         })
     }
     
