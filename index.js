@@ -1,9 +1,14 @@
 const inventory = newInventory()
 move(inventory).to(0, 0)
 
-const character = newImage('assets/green-character/static.gif')
-move(character).to(100, 250)
+// const character = newImage('assets/green-character/static.gif')
+// move(character).to(100, 250)
 
+const character = newImage('assets/green-character/static.gif')
+let direction = null;
+let x = 100;
+let y = 250;
+move(character).to(100, 250)
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
